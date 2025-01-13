@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRI INFO APP</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #333;
+        }
+        .info-panel {
+            flex: 2;
+            padding: 20px;
+            background-color: #444;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            overflow-y: auto;
+        }
+        .container {
+            background-color: #555;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .info-panel h1 {
+            font-size: 3em;
+            margin: 0 0 10px 0;
+        }
+        .info-panel p {
+            margin: 0;
+            line-height: 1.5em;
+        }
+        .keypad {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 20px;
+            background-color: #333;
+        }
+        .keypad button {
+            font-size: 1.5em;
+            padding: 20px;
+            background-color: #555;
+            border: 1px solid #666;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+        .keypad button:hover {
+            background-color: #666;
+            transform: scale(1.05);
+        }
+        .keypad button.enter {
+            grid-column: span 3;
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="info-panel">
+        <div class="container">
+            <h1>姓名</h1>
+            <p>俱乐部简称<br>性别 国籍<br>组别<br>备注信息</p>
+        </div>
+        <div class="container">
+            <p>自动计算出的最好成绩<br>如2024年曾获多少冠军、亚军<br>积分在所在分龄组的排名</p>
+        </div>
+        <div class="container">
+            <p>过去几场比赛的分时成绩<br>2024年在云港铁人三项赛 2024.5.16<br>S 00:18:01/T1 00:00:25/B 01:10:22/T2 00:00:47<br>R 00:38:05/TT 02:07:40</p>
+        </div>
+    </div>
+    <div class="keypad">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>0</button>
+        <button>删除</button>
+        <button class="enter">Enter</button>
+    </div>
+</body>
+</html>
