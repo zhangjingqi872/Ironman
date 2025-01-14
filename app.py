@@ -6,7 +6,7 @@ import pandas as pd
 def load_athlete_data():
     # Initialize connection.
     conn = st.connection("sql", type='sql')
-    df = conn.query("SELECT * FROM athlete_info_utf8", ttl=600)
+    df = conn.query('SELECT * from athlete_info_utf8;', ttl=600)
     return df
 
 
