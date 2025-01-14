@@ -5,7 +5,7 @@ import pandas as pd
 # Mock function to simulate loading athlete data
 def load_athlete_data():
     # Initialize connection.
-    conn = st.connection('mysql', type='sql')
+    conn = st.connection("mysql")
     df = conn.query("SELECT * FROM athlete_info_utf8", ttl=600)
     return df
 
